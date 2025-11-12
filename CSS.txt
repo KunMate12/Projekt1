@@ -1,0 +1,30 @@
+.hidden {
+    display: none;
+  }
+
+  .good {
+    color: green;
+    font-weight: bold;
+  }
+
+  .medium {
+    color: orange;
+    font-weight: bold;
+  }
+
+  .bad {
+    color: red;
+    font-weight: bold;
+  }
+
+  details {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  .answers label {
+    display: block;
+    margin-top: 5px;
+  }
