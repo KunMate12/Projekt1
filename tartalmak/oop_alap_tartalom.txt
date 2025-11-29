@@ -1,0 +1,67 @@
+Bevezető
+
+A modern programozásban gyakran nem elég különálló függvényekkel és változókkal dolgozni. A programok bonyolultabbak, szerteágazóbbak, és egyre nagyobb igény van arra, hogy a logikát áttekinthető, újrahasznosítható és jól szervezett egységekbe rendezzük.
+Erre nyújt megoldást az objektumorientált programozás (OOP), amely lehetővé teszi, hogy a programot objektumok köré építsük, hasonlóan a valóság működéséhez.
+
+
+
+Az OOP fogalma
+
+Az OOP (Object-Oriented Programming) egy programozási paradigma, amely a programot egymással együttműködő objektumokból építi fel.
+
+
+
+Példakód
+
+class Kutya:
+    def __init__(self, nev, kor):
+        self.nev = nev
+        self.kor = kor
+
+    def ugat(self):
+        print(f"{self.nev} azt mondja: Vau!")
+
+k1 = Kutya("Bodri", 3)
+
+print(k1.nev)
+print(k1.kor)
+
+k1.ugat()
+
+
+
+A kód magyarázata (egyszerűen)
+
+class Kutya: -> Ezzel létrehozunk egy osztályt. Ez olyan, mint egy sablon, ami leírja, milyen egy kutya a programban.
+
+__init__(self, nev, kor) -> Ez a konstruktor. Akkor fut le, amikor új kutyát hozunk létre. Itt adjuk meg, hogy a kutyának mi legyen a neve és kora.
+
+self.nev = nev és self.kor = kor -> Ezekkel létrehozzuk a kutya adatait (attribútumait). A self mindig az aktuális kutyára mutat.
+
+ugat() -> metódus Ez egy funkció, amit a kutya “tud”. Hívásakor kiírja, hogy a kutya ugat.
+
+k1 = Kutya("Bodri", 3) -> Objektum létrehozása. Itt készítünk egy új kutyát, Bodri néven, 3 évesen.
+
+k1.nev      
+k1.kor      -> Adatok elérése és metódus meghívása
+k1.ugat()  
+
+
+
+Gyakorló feladatok (megoldás nélkül)
+1. feladat
+
+Hozz létre egy Szemely osztályt, amelynek van neve és életkora!
+Adj hozzá egy metódust, ami kiírja:
+„XY vagyok, X éves.”
+
+2. feladat
+Készíts egy Konyv osztályt:
+- attribútumok: cím, szerző, év
+- metódus: leiras(), ami egy mondatban összefoglalja a könyv adatait.
+
+3. feladat
+
+Írj egy Telefon osztályt, amely:
+- tárolja a márkát és a modellt
+- tartalmaz egy csorog() metódust, ami kiírja: „Csörög a [márka] [modell]!” 

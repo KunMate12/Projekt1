@@ -1,0 +1,59 @@
+Bevezető
+
+Az objektumok létrehozásakor gyakran szeretnénk alapértelmezett adatokat megadni nekik. Erre szolgál a konstruktor, és az objektum adatait attribútumokként tároljuk, így minden objektum saját állapotot kap, amit a program később felhasználhat.
+
+
+Konstruktor fogalma
+
+A konstruktor egy speciális metódus, ami automatikusan lefut, amikor új objektumot hozunk létre. Pythonban ezt a __init__() metódussal valósítjuk meg, és itt adhatjuk meg az objektum induló adatait.
+
+Attribútumok fogalma
+
+Az attribútumok az objektum adatai, amelyek leírják az állapotát. Minden objektumnak lehetnek saját attribútumai, és ezeket a konstruktorban hozzuk létre a self kulcsszó segítségével.
+
+
+
+Példakód
+
+class Kutya:
+    def __init__(self, nev, kor):
+        self.nev = nev
+        self.kor = kor
+
+    def ugat(self):
+        print(f"{self.nev} azt mondja: Vau!")
+
+k1 = Kutya("Bodri", 3)
+k2 = Kutya("Morzsi", 5)
+
+print(k1.nev)   # Bodri
+print(k2.kor)   # 5
+
+k1.ugat()
+k2.ugat()
+
+
+A kód magyarázata (egyszerűen)
+
+__init__(self, nev, kor) –> a konstruktor, itt adjuk meg a kutya nevét és korát.
+
+self.nev = nev és self.kor = kor –> ezek hozzák létre az objektum attribútumait, amelyek minden példánynál különbözhetnek.
+
+self –> mindig az aktuális objektumra mutat.
+
+k1 = Kutya("Bodri", 3) –>  Objektum létrehozása
+
+k1.ugat() –> Attribútumok és metódusok használata
+
+
+
+Gyakorló feladatok (megoldás nélkül)
+
+1. feladat
+Hozz létre egy Auto osztályt, konstruktorban marka és ev attribútummal, és egy indit() metódust.
+
+2. feladat
+Készíts egy Macska osztályt, konstruktorban nev és szin attribútummal, és egy nyavog() metódust.
+
+3. feladat
+Írj egy Telefon osztályt: attribútumok marka, modell; metódus: csorog().

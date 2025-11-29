@@ -1,0 +1,64 @@
+Bevezető
+
+Az OOP egyik nagy előnye, hogy új osztályokat hozhatunk létre meglévő osztályokból, anélkül, hogy mindent újra kellene írni. Ez az öröklődés lényege.
+A polimorfizmus pedig lehetővé teszi, hogy ugyanaz a metódus különböző osztályok objektumainál különböző módon viselkedjen, így a kód rugalmasabb és könnyebben bővíthető lesz.
+
+
+
+Öröklődés fogalma
+
+Az öröklődés azt jelenti, hogy egy osztály átveheti egy másik osztály attribútumait és metódusait. Ez lehetővé teszi, hogy újrahasznosítsuk a meglévő kódot, és az új osztály szükség szerint kiegészítheti vagy felülírhatja a szülő osztály működését.
+
+Polimorfizmus fogalma
+
+A polimorfizmus azt jelenti, hogy ugyanaz a metódus különböző osztályok objektumainál másképp viselkedhet. Így a kód egységesen hívható, de az eredmény az adott objektumtól függ, ami nagyobb rugalmasságot biztosít a programozásban.
+
+
+
+Példakód
+
+class Allat:
+    def __init__(self, nev):
+        self.nev = nev
+
+    def hangot_ad(self):
+        print("Ez az állat hangot ad.")
+
+class Kutya(Allat):
+    def hangot_ad(self):
+        print(f"{self.nev} azt mondja: Vau!")
+
+class Macska(Allat):
+    def hangot_ad(self):
+        print(f"{self.nev} azt mondja: Nyávog!")
+
+k = Kutya("Bodri")
+m = Macska("Mici")
+
+k.hangot_ad()
+m.hangot_ad()
+
+
+
+A kód magyarázata (egyszerűen)
+
+Szülő osztály (Allat) –> ez az alap, minden állatnak van neve és egy alap metódusa hangot_ad().
+
+Gyerek osztályok (Kutya, Macska) –> öröklik az Allat osztály attribútumait, de felülírják a hangot_ad() metódust.
+
+k = Kutya("Bodri") m = Macska("Mici") –> Objektumok létrehozása
+
+Polimorfizmus –> ugyanazt a hangot_ad() hívást minden objektum másképp valósítja meg
+
+
+
+Gyakorló feladatok (megoldás nélkül)
+
+1. feladat
+Hozz létre egy Jarmu osztályt, ami rendelkezik nev attribútummal és indul() metódussal.
+
+2. feladat
+Készíts Auto és Motor osztályt, amelyek öröklik a Jarmu osztályt, és felülírják az indul() metódust.
+
+3. feladat
+Hozz létre egy Hangya osztályt és egy Levelevo osztályt, amelyek öröklik az Allat osztályt, mindegyik másképp valósítja meg a hangot_ad() metódust.

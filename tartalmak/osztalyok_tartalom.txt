@@ -1,0 +1,49 @@
+Bevezető
+
+Az objektumorientált programozás egyik legfontosabb eleme, hogy a programunkat osztályokra és azokból létrehozott objektumokra építjük.
+Ezek segítségével a program logikáját kisebb, könnyebben érthető egységekre bonthatjuk.
+
+
+Osztályok fogalma
+
+Egy osztály (class) egy sablon vagy tervrajz, amely meghatározza, hogy a belőle készülő objektumnak milyen adatai (attribútumai) vannak és mit tud csinálni (metódusai).
+
+Objektumok fogalma
+
+Az objektum az osztály alapján készült konkrét példány.
+
+
+
+Példakód
+
+class Ember:
+    def koszon(self):
+        print("Szia, örülök hogy találkozunk!")
+
+e1 = Ember()
+
+e1.koszon()
+
+
+A kód magyarázata (egyszerűen)
+
+class Ember: -> Itt hozzuk létre az osztályt. Ez leírja, hogy egy „Ember” objektum mire képes.
+
+koszon() metódus -> Ez az „Ember” osztály egyik funkciója. Ha meghívjuk, kiír egy köszönő üzenetet.
+
+e1 = Ember() -> Itt készítünk egy objektumot az Ember osztály alapján. Ez olyan, mintha a „tervrajzból” egy kész példányt készítenénk.
+
+e1.koszon() -> Az objektum meghívja az osztályban definiált metódust.
+
+
+Gyakorló feladatok (megoldás nélkül)
+
+1. feladat
+Hozz létre egy Auto osztályt, amelynek van indit() metódusa, ami kiírja: „Az autó beindult.”
+
+2. feladat
+Készíts egy Macska osztályt, amelynek van egy nyavog() metódusa!
+Hozz létre legalább egy macska objektumot, és hívd meg a metódusát.
+
+3. feladat
+Írj egy Lamp osztályt egy kapcsol() metódussal, amely kiírja, hogy a lámpa felkapcsolt vagy lekapcsolt.

@@ -1,0 +1,58 @@
+Bevezető
+
+Az enkapszuláció azt jelenti, hogy egy objektum adatainak kezelését az osztályon belül tartjuk, és az objektum működését metódusok segítségével szabályozzuk.
+Ez lehetővé teszi, hogy az objektum belső állapota rendezett és áttekinthető legyen.
+
+
+
+Enkapszuláció fogalma
+
+Enkapszulációkor az osztály összegyűjti az adatokat és a hozzájuk tartozó műveleteket, így az objektum egységként kezelhető. Ez segít a program logikájának tisztán tartásában és az adatok szervezésében.
+
+
+
+Példakód
+
+class BankSzamla:
+    def __init__(self, egyenleg):
+        self.egyenleg = egyenleg
+
+    def betesz(self, osszeg):
+        self.egyenleg += osszeg
+
+    def kolt(self, osszeg):
+        self.egyenleg -= osszeg
+
+szamla = BankSzamla(1000)
+
+szamla.betesz(500)
+szamla.kolt(200)
+
+print(szamla.egyenleg)  
+
+
+
+A kód magyarázata (egyszerűen)
+
+__init__ –> a konstruktorban adjuk meg az objektum kezdeti egyenlegét.
+
+self.egyenleg –> az objektum adata, amit az osztály kezel.
+
+betesz() –> növeli az egyenleget a megadott összeggel.
+
+kolt() –> csökkenti az egyenleget a megadott összeggel.
+
+BankSzamla(1000)  –> Objektum létrehozása és használata ; a metódusokkal módosítjuk az objektum állapotát.
+
+
+
+Gyakorló feladatok (megoldás nélkül)
+
+1. feladat
+Hozz létre egy Szemely osztályt nev attribútummal, és egy bemutatkozik() metódust, ami kiírja a nevet.
+
+2. feladat
+Készíts egy Auto osztályt sebesseg attribútummal, és írd meg a gyorsit() és lassit() metódusokat.
+
+3. feladat
+Hozz létre egy Telefon osztályt akkumulator_szint attribútummal, és írd meg a tolts() és hasznal() metódusokat.
