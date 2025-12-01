@@ -1,0 +1,188 @@
+Enkapszuláció:
+
+Mi az enkapszuláció lényege?
+Helyes válasz:
+A) Az adatok és a hozzájuk tartozó műveletek összefogása egy osztályon belül.
+
+Hibás válaszok:
+B) Az, hogy minden változó globális legyen.
+C) Az, hogy a program minden része mindent láthasson.
+D) Az, hogy az osztályok ne tartalmazhassanak metódusokat.
+
+-------------------------------------------------------------------------
+
+Mit jelent a BankSzamla osztály init metódusa?
+Helyes válasz:
+A) Konstruktor, amely az objektum kezdeti értékeit állítja be.
+
+Hibás válaszok:
+B) Egy véletlenszerűen futó függvény.
+C) Egy olyan metódus, amely törli az objektumot.
+D) Egy külső függvény, amely nincs az osztály része.
+
+----------------------------------------------------------------------
+
+Mit csinál a betesz() metódus a példában?
+
+Helyes válasz:
+A) Növeli az egyenleget a megadott összeggel.
+
+Hibás válaszok:
+B) Duplázza az egyenleget.
+C) Csökkenti az egyenleget.
+D) Nullára állítja az egyenleget.
+
+
+//////////////////////////////////////////////////////////
+
+Konstruktor:
+
+Mi a konstruktor szerepe egy osztályban?
+
+Helyes válasz:
+A) Automatikusan lefut, amikor létrehozunk egy új objektumot.
+
+Hibás válaszok:
+B) Minden metódust újraindít az osztályban.
+C) Csak akkor fut le, ha kézzel meghívjuk.
+D) Az osztály törlésére szolgál.
+
+----------------------------------------------------------
+
+Hogyan nevezzük a konstruktort Pythonban?
+
+Helyes válasz:
+A) init()
+
+Hibás válaszok:
+B) start()
+C) constructor()
+D) begin()
+
+-----------------------------------------------------------
+
+Mit tárolnak az attribútumok?
+
+Helyes válasz:
+A) Az objektum adatait, amelyek leírják az állapotát.
+
+Hibás válaszok:
+B) A teljes program összes változóját.
+C) Csak a metódusok adatait.
+D) A Python futási idejét.
+
+///////////////////////////////////////////////////////////////
+
+oop_alap:
+
+Mi az objektumorientált programozás (OOP) lényege?
+
+Helyes válasz:
+A) A programot egymással együttműködő objektumokból építjük fel.
+
+Hibás válaszok:
+B) Minden kódot egyetlen hatalmas függvénybe írunk.
+C) A program csak számításokat végezhet, objektumokat nem használhat.
+D) A változókat nem lehet csoportosítani.
+
+-------------------------------------------------------------------
+
+Mi a szerepe az osztálynak az OOP-ben?
+
+Helyes válasz:
+A) Sablonként szolgál, amely leírja, hogy hogyan néz ki és mit tud egy objektum.
+
+Hibás válaszok:
+B) Egy véletlenszerűen generált függvény.
+C) Csak változókat tárolhat, metódusokat nem.
+D) Egy előre definiált Python funkció.
+
+---------------------------------------------------------------------
+
+Mi a konstruktor feladata a példában?
+
+Helyes válasz:
+A) Akkor fut le, amikor új Kutya objektumot hozunk létre, és beállítja a név és kor attribútumokat.
+
+Hibás válaszok:
+B) Megsemmisíti a korábbi objektumokat.
+C) Automatikusan ugat a kutya.
+D) Feltölti a memóriát alapadatokkal.
+
+////////////////////////////////////////////////////////
+
+oroklodes:
+
+ Mit jelent az öröklődés az OOP-ben?
+
+Helyes válasz:
+A) Egy osztály átveheti egy másik osztály attribútumait és metódusait.
+
+Hibás válaszok:
+B) Egy osztály képes önmagát újra létrehozni.
+C) Csak a változókat lehet örökölni, metódusokat nem.
+D) A program automatikusan lemásolja az összes létező osztályt.
+
+------------------------------------------------------------------------
+
+i a polimorfizmus lényege?
+
+Helyes válasz:
+A) Ugyanaz a metódus különböző objektumoknál másképp viselkedhet.
+
+Hibás válaszok:
+B) Az összes objektum teljesen azonos lesz.
+C) Minden osztály ugyanazt a működést örökli kötelezően.
+D) A metódusok nem hívhatók ugyanúgy.
+
+----------------------------------------------------------------
+
+Mit örököl a Kutya osztály az Allat osztálytól?
+
+Helyes válasz:
+A) A nev attribútumot és a hangot_ad() metódust (amit felül is írhat).
+
+Hibás válaszok:
+B) Csak az attribútumokat, metódust nem.
+C) Csak a hangot_ad() metódust, semmilyen attribútumot.
+D) Semmit, a Kutya teljesen különálló osztály.
+
+////////////////////////////////////////////////////////////////
+
+osztalyok:
+
+Mi az osztály az objektumorientált programozásban?
+
+Helyes válasz:
+A) Egy sablon vagy tervrajz, amely meghatározza az objektumok adatait és működését.
+
+Hibás válaszok:
+B) Egy kész objektum, amit a program futtat.
+C) Egy változó, ami csak számokat tárol.
+D) Egy olyan függvény, amely automatikusan fut.
+
+------------------------------------------------------------------
+
+Mit jelent az, hogy az objektum „példány”?
+
+Helyes válasz:
+A) Az osztály alapján létrehozott konkrét darab.
+
+Hibás válaszok:
+B) Egy különleges típusú függvény.
+C) Egy teljesen más program.
+D) Egy olyan változó, amit nem lehet módosítani.
+
+-------------------------------------------------------------------
+
+Melyik állítás igaz az objektumok létrehozására?
+
+Helyes válasz:
+A) Egy objektum az osztály alapján jön létre, és az osztály metódusait használhatja.
+
+Hibás válaszok:
+B) Objektumot csak Python könyvtárból lehet létrehozni.
+C) Az objektum mindig ugyanaz, mint az osztály.
+D) Objektum létrehozásakor a program automatikusan kilép.
+
+////////////////////////////////////////////////////////////////////////
