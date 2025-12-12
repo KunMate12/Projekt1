@@ -1,0 +1,120 @@
+const questions = [
+  {
+    question: "Melyik évben kezdődött a második világháború?",
+    answers: ["1939", "1945", "1914", "1920"],
+    correct: 0
+  },
+  {
+    question: "Melyik a legnagyobb bolygó a Naprendszerben?",
+    answers: ["Föld", "Jupiter", "Mars", "Szaturnusz"],
+    correct: 1
+  },
+  {
+    question: "Mi a H2O közismertebb neve?",
+    answers: ["Hidrogén", "Sav", "Víz", "Levegő"],
+    correct: 2
+  }
+];
+
+let score = 0;
+let answered = 0;
+
+const quizContainer = document.getElementById("quiz-container");
+const resultDiv = document.getElementById("result");
+const restartBtn = document.getElementById("restart-btn");
+
+function renderQuiz() {
+  quizContainer.innerHTML = "";
+  resultDiv.classList.add("hidden");
+  restartBtn.classList.add("hidden");
+  score = 0;
+  answered = 0;
+
+  for (let i = 0; i < questions.length; i++) {
+    const q = questions[i];
+
+    const details = document.createElement("details");
+    const summary = document.createElement("summary");
+    summary.textContent = "Kérdés " + (i + 1) + ": " + q.question;
+
+    details.appendChild(summary);
+
+    const answersDiv = document.createElement("div");
+
+    for (let j = 0; j < q.answers.length; j++) {
+      const label = document.createElement("label");
+      const input = document.createElement("input");
+
+      input.type = "radio";
+      input.name = "q" + i;
+      input.value = j;
+
+      label.appendChild(input);
+      label.appendChild(document.createTextNode(" " + q.answers[j]));
+
+      answersDiv.appendChild(label);
+      answersDiv.appendChild(document.createElement("br"));
+    }
+
+    const button = document.createElement("button");
+    button.textContent = "Válasz elküldése";
+
+    button.addEventListener("click", function () {
+      handleAnswer(i, details);
+    });
+
+    answersDiv.appendChild(button);
+    details.appendChild(answersDiv);
+    quizContainer.appendChild(details);
+  }
+}
+
+function handleAnswer(index, details) {
+  const selected = document.querySelector('input[name="q' + index + '"]:checked');
+
+  if (!selected) {
+    alert("Kérlek, válassz egy választ!");
+    return;
+  }
+
+  const value = Number(selected.value);
+  if (value === questions[index].correct) {
+    score++;
+  }
+
+  answered++;
+
+  details.open = false;
+  const inputs = details.querySelectorAll("input, button");
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].disabled = true;
+  }
+  details.style.opacity = "0.7";
+
+  if (answered === questions.length) {
+    showResult();
+  }
+}
+
+function showResult() {
+  const total = questions.length;
+  const percent = Math.round((score / total) * 100);
+
+  let text = "Eredményed: " + score + "/" + total + " (" + percent + "%)";
+
+  if (percent >= 80) {
+    text += " - Nagyon jó!";
+  } else if (percent >= 50) {
+    text += " - Egész jó!";
+  } else {
+    text += " - Próbáld újra!";
+  }
+
+  resultDiv.textContent = text;
+  resultDiv.classList.remove("hidden");
+  restartBtn.classList.remove("hidden");
+}
+
+restartBtn.addEventListener("click", renderQuiz);
+
+renderQuiz();
