@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>OOP öröklődés</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "OOP öröklődés és polimorfizmus – Példák és magyarázat",
+      "description": "Ismerd meg az objektumorientált programozás öröklődését és polimorfizmusát Python példákkal és gyakorló feladatokkal. Tanulj hatékonyan OOP-t!",
+      "author": { "@type": "Person", "name": "Kun Máté" },
+      "datePublished": "2025-12-30",
+      "dateModified": "2025-12-30",
+    }
+    </script>
+
+    <style>
+        body{
+            font-size: large;
+        }
+        summary{
+            font-size: xx-large;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <nav class="navbar bg-dark navbar-dark navbar-expand-sm ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="Oroklodes.html">Öröklődés</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-link active" href="Weboldal.html">Főoldal</a>
+                            <a class="nav-link active" href="OOP alapok.html">OOP alapok</a>
+                            <a class="nav-link active" href="Osztalyok.html">Osztályok</a>
+                            <a class="nav-link active" href="Konstruktorok.html">Konstruktorok</a>
+                            <a class="nav-link active" href="Enkapszulacio.html">Enkapszuláció</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    <div class="container">
+        <main>
+            <div class="row">
+                <h2 class="text-center my-4">Öröklődés és polimorfizmus</h2>
+
+                <div class="col-lg-6 col-md-12 col-12"><img src="OOP öröklődés.png" alt="OOP öröklődés" style="width: 100%; height: auto;"></div>
+
+                <div class="col-lg-6 col-md-12 col-12">
+                    <h2 class="text-center my-2" style="font-size: 30px;">Bevezető</h2>
+                    <p class="p-3" style="text-align: justify; font-size: 20px;">Az OOP egyik nagy előnye, hogy új osztályokat hozhatunk létre meglévő osztályokból, anélkül, hogy mindent újra kellene írni. Ez az öröklődés lényege. A polimorfizmus pedig lehetővé teszi, hogy ugyanaz a metódus különböző osztályok objektumainál különböző módon viselkedjen, így a kód rugalmasabb és könnyebben bővíthető lesz.</p>
+                </div>
+
+            </div>
+
+            <div class="row my-4">
+                <h2>Fogalmak magyarázata:</h2>
+                <div class="col-lg-12 col-md-12 col-12" style="font-size: 20px;">
+                    <ul>
+                        <li><p><b>Öröklődés fogalma:</b> Az öröklődés azt jelenti, hogy egy osztály átveheti egy másik osztály attribútumait és metódusait. Ez lehetővé teszi, hogy újrahasznosítsuk a meglévő kódot, és az új osztály szükség szerint kiegészítheti vagy felülírhatja a szülő osztály működését.</p></li>
+
+                        <li><p><b>Polimorfizmus fogalma:</b> A polimorfizmus azt jelenti, hogy ugyanaz a metódus különböző osztályok objektumainál másképp viselkedhet. Így a kód egységesen hívható, de az eredmény az adott objektumtól függ, ami nagyobb rugalmasságot biztosít a programozásban.</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <h4>Példakód:</h4>
+                <div class="col-lg-6 col-md-12 col-12 bg-dark p-3" style="height: auto;">
+                    <code>
+                        <p class="text-white ">
+                            <pre class="text-white" style="font-size: 17px;">
+    class Allat:
+        def __init__(self, nev):
+            self.nev = nev
+
+        def hangot_ad(self):
+            print("Ez az állat hangot ad.")
+
+    class Kutya(Allat):
+        def hangot_ad(self):
+            print(f"{self.nev} azt mondja: Vau!")
+
+    class Macska(Allat):
+        def hangot_ad(self):
+            print(f"{self.nev} azt mondja: Nyávog!")
+
+    k = Kutya("Bodri")
+    m = Macska("Mici")
+
+    k.hangot_ad()
+    m.hangot_ad()
+                            </pre>
+                        </p>
+                    </code>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <h2>Kód magyarázata:</h2>
+                <div class="col-lg-12 col-md-12 col-12" style="font-size: 20px;">
+                    <ul>
+                        <li><p><b>Szülő osztály (Allat)</b> -> Ez az alap, minden állatnak van neve és egy alap metódusa hangot_ad().</p></li>
+                        <li><p><b>Kutya, Macska osztályok</b> -> Öröklik az Allat osztály attribútumait, de felülírják a hangot_ad() metódust.</p></li>
+                        <li><p><b>k = Kutya("Bodri"), m = Macska("Mici")</b> -> Objektumok létrehozása.</p></li>
+                        <li><p><b>Polimorfizmus</b> -> Ugyanazt a <b>hangot_ad()</b> hívást minden objektum másképp valósítja meg.</p></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div>
+                    <details>
+                        <summary>Gyakorló feladatok</summary>
+                        <h4 class="my-4 mb-1" style="font-size: 22px;">1. feladat</h4>
+                        <p style="font-size: 18px;">Hozz létre egy Jarmu osztályt, ami rendelkezik nev attribútummal és indul() metódussal.</p>
+
+                        <h4 class="my-4 mb-1" style="font-size: 22px;">2. feladat</h4>
+                        <p style="font-size: 18px;">Készíts Auto és Motor osztályt, amelyek öröklik a Jarmu osztályt, és felülírják az indul() metódust.</p>
+
+                        <h4 class="my-4 mb-1" style="font-size: 22px;">3. feladat</h4>
+                        <p style="font-size: 18px;">Hozz létre egy Hangya osztályt és egy Levelevo osztályt, amelyek öröklik az Allat osztályt, mindegyik másképp valósítja meg a hangot_ad() metódust.</p>
+                    </details>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+    <div class="container-fluid">
+		<footer>
+			<div class="row">
+				<div class="bg-dark text-white text-center py-3 mt-2">
+					<small>Iskolai projekt © 2025</small>
+				</div>
+			</div>
+		</footer>
+    </div>
+    
+</body>
+</html>

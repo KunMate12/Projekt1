@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP Teszt</title>
+</head>
+<body>
+
+<h3>OOP – 10 kérdéses teszt</h3>
+
+<p>1. Mit jelent az OOP (Object-Oriented Programming)?</p>
+<input type="radio" name="q1" value="0"> Egy adatbázis-kezelési módszer<br>
+<input type="radio" name="q1" value="0"> Egy programozási nyelv<br>
+<input type="radio" name="q1" value="1"> Egy paradigma, amely objektumokból építi fel a programot<br>
+<input type="radio" name="q1" value="0"> Egy grafikus tervezési elv<br><br>
+
+<p>2. Mi az osztály (class)?</p>
+<input type="radio" name="q2" value="0"> Egy konkrét példány<br>
+<input type="radio" name="q2" value="1"> Egy sablon, amely meghatározza az objektum adatait és műveleteit<br>
+<input type="radio" name="q2" value="0"> Egy futó program<br>
+<input type="radio" name="q2" value="0"> Egy változó<br><br>
+
+<p>3. Mi az objektum?</p>
+<input type="radio" name="q3" value="0"> Egy metódus<br>
+<input type="radio" name="q3" value="0"> Egy attribútum<br>
+<input type="radio" name="q3" value="1"> Az osztály alapján készült konkrét példány<br>
+<input type="radio" name="q3" value="0"> Egy programozási nyelv<br><br>
+
+<p>4. Mi a konstruktor feladata?</p>
+<input type="radio" name="q4" value="0"> Az objektum adatainak törlése<br>
+<input type="radio" name="q4" value="0"> Az osztály metódusainak felsorolása<br>
+<input type="radio" name="q4" value="1"> Az objektum alapértelmezett adatainak beállítása létrehozáskor<br>
+<input type="radio" name="q4" value="0"> Az objektum metódusainak meghívása később<br><br>
+
+<p>5. Hogyan nevezzük Pythonban a konstruktort?</p>
+<input type="radio" name="q5" value="0"> create()<br>
+<input type="radio" name="q5" value="0"> start()<br>
+<input type="radio" name="q5" value="0"> new()<br>
+<input type="radio" name="q5" value="1"> init()<br><br>
+
+<p>6. Mik az attribútumok?</p>
+<input type="radio" name="q6" value="0"> Az objektumhoz tartozó műveletek<br>
+<input type="radio" name="q6" value="1"> Az objektum adatai, amelyek az állapotát írják le<br>
+<input type="radio" name="q6" value="0"> Az osztály nevei<br>
+<input type="radio" name="q6" value="0"> Külső változók a programban<br><br>
+
+<p>7. Mit jelent az öröklődés az OOP-ben?</p>
+<input type="radio" name="q7" value="0"> Az objektumok törlését<br>
+<input type="radio" name="q7" value="1"> Egy osztály átveheti egy másik osztály attribútumait és metódusait<br>
+<input type="radio" name="q7" value="0"> Az objektumok másolását<br>
+<input type="radio" name="q7" value="0"> Az osztályok elrejtését<br><br>
+
+<p>8. Mi a polimorfizmus lényege?</p>
+<input type="radio" name="q8" value="0"> Az osztályok közötti adatmegosztás<br>
+<input type="radio" name="q8" value="0"> Ugyanaz a metódus mindenhol ugyanúgy működik<br>
+<input type="radio" name="q8" value="1"> Ugyanaz a metódus különböző objektumoknál másképp viselkedhet<br>
+<input type="radio" name="q8" value="0"> Az objektumok számának növelése<br><br>
+
+<p>9. Mit jelent az enkapszuláció?</p>
+<input type="radio" name="q9" value="0"> Az objektum adatainak nyilvánossá tétele<br>
+<input type="radio" name="q9" value="1"> Az adatok és a hozzájuk tartozó műveletek egy osztályba zárása<br>
+<input type="radio" name="q9" value="0"> Az objektumok törlése a memóriából<br>
+<input type="radio" name="q9" value="0"> Az osztályok öröklődése egymásból<br><br>
+
+<p>10. Mi az enkapszuláció egyik fő előnye?</p>
+<input type="radio" name="q10" value="0"> Gyorsabb programfutás<br>
+<input type="radio" name="q10" value="0"> Kevesebb memóriahasználat<br>
+<input type="radio" name="q10" value="1"> A program logikájának tisztán és áttekinthetően tartása<br>
+<input type="radio" name="q10" value="0"> Kevesebb kód írása<br><br>
+
+<button onclick="ertekel()">Kiértékelés</button>
+
+<p id="eredmeny"></p>
+
+<script>
+function ertekel() {
+    let pont = 0;
+    for (let i = 1; i <= 10; i++) {
+        let v = document.querySelector('input[name="q' + i + '"]:checked');
+        if (v) pont += Number(v.value);
+    }
+    document.getElementById("eredmeny").innerText =
+        "Eredmény: 10 / " + pont;
+}
+</script>
+
+</body>
+</html>
