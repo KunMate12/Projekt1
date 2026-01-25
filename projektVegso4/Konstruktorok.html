@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>OOP konstruktorok</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "OOP konstruktorok és attribútumok – Példák és magyarázat",
+      "description": "Tanuld meg az OOP konstruktorok és attribútumok működését Python példákkal és gyakorló feladatokkal a kezdő programozók számára.",
+      "author": { "@type": "Person", "name": "Kun Máté" },
+      "datePublished": "2025-12-30",
+      "dateModified": "2025-12-30",
+    }
+    </script>
+
+    <style>
+        body{
+            font-size: large;
+        }
+        summary{
+            font-size: xx-large;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <nav class="navbar bg-dark navbar-dark navbar-expand-sm ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="Konstruktorok.html">Konstruktorok</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-link active" href="Weboldal.html">Főoldal</a>
+                            <a class="nav-link active" href="OOP alapok.html">OOP alapok</a>
+                            <a class="nav-link active" href="Osztalyok.html">Osztályok</a>
+                            <a class="nav-link active" href="Oroklodes.html">Öröklődés</a>
+                            <a class="nav-link active" href="Enkapszulacio.html">Enkapszuláció</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    <div class="container">
+        <main>
+            <div class="row">
+                <h2 class="text-center my-4">Konstruktorok és attribútumok</h2>
+
+                <div class="col-lg-6 col-md-12 col-12"><img src="OOP konstruktorok.webp" alt="OOP konstruktorok" style="width: 100%; height: auto;" loading="lazy"></div>
+
+                <div class="col-lg-6 col-md-12 col-12">
+                    <h2 class="text-center my-2" style="font-size: 30px;">Bevezető</h2>
+                    <p class="p-3" style="text-align: justify; font-size: 20px;">Az objektumok létrehozásakor gyakran szeretnénk alapértelmezett adatokat megadni nekik. Erre szolgál a konstruktor, és az objektum adatait attribútumokként tároljuk, így minden objektum saját állapotot kap, amit a program később felhasználhat.</p>
+                </div>
+
+            </div>
+
+            <div class="row my-4">
+                <h2>Fogalmak magyarázata:</h2>
+                <div class="col-lg-12 col-md-12 col-12" style="font-size: 20px;">
+                    <ul>
+                        <li><p><b>Konstruktorok fogalma:</b> A konstruktor egy speciális metódus, ami automatikusan lefut, amikor új objektumot hozunk létre. Pythonban ezt a __init__() metódussal valósítjuk meg, és itt adhatjuk meg az objektum induló adatait.</p></li>
+
+                        <li><p><b>Attribútumok fogalma:</b> Az attribútumok az objektum adatai, amelyek leírják az állapotát. Minden objektumnak lehetnek saját attribútumai, és ezeket a konstruktorban hozzuk létre a self kulcsszó segítségével.</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <h4>Példakód:</h4>
+                <div class="col-lg-6 col-md-12 col-12 bg-dark p-3" style="height: auto;">
+                    <code>
+                        <p class="text-white ">
+                            <pre class="text-white" style="font-size: 17px;">
+    class Kutya:
+        def __init__(self, nev, kor):
+            self.nev = nev
+            self.kor = kor
+
+        def ugat(self):
+            print(f"{self.nev} azt mondja: Vau!")
+
+    k1 = Kutya("Bodri", 3)
+    k2 = Kutya("Morzsi", 5)
+
+    print(k1.nev)
+    print(k2.kor)
+
+    k1.ugat()
+    k2.ugat()
+                            </pre>
+                        </p>
+                    </code>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <h2>Kód magyarázata:</h2>
+                <div class="col-lg-12 col-md-12 col-12" style="font-size: 20px;">
+                    <ul>
+                        <li><p><b>__init__(self, nev, kor)</b> -> A konstruktor, itt adjuk meg a kutya nevét és korát.</p></li>
+                        <li><p><b>self.nev = nev</b> és <b>self.kor = kor</b> -> Ezek hozzák létre az objektum attribútumait, amelyek minden példánynál különbözhetnek.</p></li>
+                        <li><p><b>self</b> -> Mindig az aktuális objektumra mutat.</p></li>
+                        <li><p><b>k1 = Kutya("Bodri", 3)</b> -> Objektum létrehozása.</p></li>
+                        <li><p><b>k1.ugat()</b> -> Attribútumok és metódusok használata.</p></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div>
+                    <details>
+                        <summary>Gyakorló feladatok</summary>
+                        <h4 class="my-4 mb-1" style="font-size: 22px;">1. feladat</h4>
+                        <p style="font-size: 18px;">Hozz létre egy Auto osztályt, konstruktorban marka és ev attribútummal, és egy indit() metódust.</p>
+
+                        <h4 class="my-4 mb-1" style="font-size: 22px;">2. feladat</h4>
+                        <p style="font-size: 18px;">Készíts egy Macska osztályt, konstruktorban nev és szin attribútummal, és egy nyavog() metódust.</p>
+
+                        <h4 class="my-4 mb-1" style="font-size: 22px;">3. feladat</h4>
+                        <p style="font-size: 18px;">Írj egy Telefon osztályt: attribútumok marka, modell; metódus: csorog().</p>
+                    </details>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+    <div class="container-fluid">
+		<footer>
+			<div class="row">
+				<div class="bg-dark text-white text-center py-3 mt-2">
+					<small>Created by Mikes Ádám & Szalacsi Péter & Kun Máté © 2026</small>
+				</div>
+			</div>
+		</footer>
+    </div>
+    
+</body>
+</html>
